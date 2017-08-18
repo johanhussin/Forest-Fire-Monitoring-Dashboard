@@ -1,0 +1,14 @@
+<?php
+
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+   include("conec.php");
+   $link=Conection();
+   $result=mysqli_query($link,"select * from fcmtoken order by id desc");    
+		                                                    while($row = mysqli_fetch_array($result)) {
+		                                                    printf("<tr>
+		                                                            <td> &nb", $row["token"]);
+		                                                       }
+		                                                       mysqli_free_result($result);
+		                                                ?>
